@@ -10,6 +10,14 @@
 </div>
 
 
+<a href="/Home/Privacy">VAI ALLA PRIVACY</a>
+
+<a asp-controller="Home" asp-action="Privacy">VAI ALLA PRIVACY</a>
+
+@Html.ActionLink("VAI ALLA PRIVACY", "Privacy", "Home", null, new { id = "MyLink", @class = "myLinkClass" })
+
+
+
 @section Styles {
     <link rel="stylesheet" href="~/css/pages/home_index.css" />
 }

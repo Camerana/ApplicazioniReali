@@ -33,7 +33,8 @@ namespace ApplicazioniReali.WebApp.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            object htmlFromDb = $"<h1>Ciao, sono un tag H1 che arriva dal DB. Come mi vedi?</h1>";
+            return View(htmlFromDb);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
