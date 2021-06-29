@@ -8,3 +8,17 @@
     <h1 class="display-4">Welcome, @Model</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/home_index.css" />
+}
+
+@section Scripts {
+
+    <script>
+        var backendModelData = '@Model';
+    </script>
+
+    <script src="~/js/pages/home_index.js"></script>
+}
