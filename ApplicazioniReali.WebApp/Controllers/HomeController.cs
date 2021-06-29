@@ -25,10 +25,9 @@ namespace ApplicazioniReali.WebApp.Controllers
         //    //return string.Concat("Ciao, ", name, " ", lastname);
         //}
 
-        public IActionResult Index(string name, string lastname)
+        public IActionResult Index()
         {
-            object message = $"{name} {lastname}";
-            return View(message);
+            return View();
         }
 
         public IActionResult Privacy()
