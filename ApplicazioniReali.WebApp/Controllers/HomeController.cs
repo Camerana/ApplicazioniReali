@@ -23,7 +23,6 @@ namespace ApplicazioniReali.WebApp.Controllers
             if (Request.RouteValues.TryGetValue("lang", out object _lang))
             {
                 string lang = _lang.ToString();
-
             }
 
             return View();
