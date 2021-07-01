@@ -1,30 +1,12 @@
-﻿@model string
-
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome, @Model</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome</h1>
+    <p>È possibile gestire una videoteca</p>
 </div>
 
-
-<a href="/Home/Privacy">VAI ALLA PRIVACY</a>
-
-<a asp-controller="Home" asp-action="Privacy">VAI ALLA PRIVACY</a>
-
-@Html.ActionLink("VAI ALLA PRIVACY", "Privacy", "Home", null, new { id = "MyLink", @class = "myLinkClass" })
-
-@section Styles {
-    <link rel="stylesheet" href="~/css/pages/home_index.css" />
-}
-
 @section Scripts {
-
-    <script>
-        var backendModelData = '@Model';
-    </script>
-
     <script src="~/js/pages/home_index.js"></script>
 }

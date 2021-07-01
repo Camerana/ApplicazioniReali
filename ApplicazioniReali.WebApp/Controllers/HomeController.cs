@@ -18,22 +18,9 @@ namespace ApplicazioniReali.WebApp.Controllers
             _logger = logger;
         }
 
-        //public string Index(string name, string lastname)
-        //{
-        //    return $"Ciao, {name} {lastname}";
-        //    //return "Ciao, " + name + " " + lastname;
-        //    //return string.Concat("Ciao, ", name, " ", lastname);
-        //}
-
         public IActionResult Index()
         {
             return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            object htmlFromDb = $"<h1>Ciao, sono un tag H1 che arriva dal DB. Come mi vedi?</h1>";
-            return View(htmlFromDb);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

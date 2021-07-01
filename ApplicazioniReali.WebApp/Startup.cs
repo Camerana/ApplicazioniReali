@@ -26,6 +26,11 @@ namespace ApplicazioniReali.WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages()
+                    .AddViewOptions(options =>
+                    {
+                        options.HtmlHelperOptions.ClientValidationEnabled = false;
+                    });
 
             services.AddDbContext<ApplicazioniRealiWebAppContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ApplicazioniRealiWebAppContext")));
