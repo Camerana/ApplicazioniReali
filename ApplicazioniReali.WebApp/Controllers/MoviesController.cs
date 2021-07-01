@@ -111,7 +111,8 @@ namespace ApplicazioniReali.WebApp.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return View(movie);
+                //return RedirectToAction(nameof(Index));
             }
             return View(movie);
         }

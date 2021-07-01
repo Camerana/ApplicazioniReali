@@ -26,11 +26,11 @@ namespace ApplicazioniReali.WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddRazorPages()
-                    .AddViewOptions(options =>
-                    {
-                        options.HtmlHelperOptions.ClientValidationEnabled = false;
-                    });
+            //services.AddRazorPages()
+            //        .AddViewOptions(options =>
+            //        {
+            //            options.HtmlHelperOptions.ClientValidationEnabled = false;
+            //        });
 
             services.AddDbContext<ApplicazioniRealiWebAppContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ApplicazioniRealiWebAppContext")));
@@ -60,7 +60,7 @@ namespace ApplicazioniReali.WebApp
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{lang=it}/{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
