@@ -20,11 +20,6 @@ namespace ApplicazioniReali.WebApp.Controllers
 
         public IActionResult Index()
         {
-            if (Request.RouteValues.TryGetValue("lang", out object _lang))
-            {
-                string lang = _lang.ToString();
-            }
-
             return View();
         }
 

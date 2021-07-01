@@ -1,0 +1,12 @@
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Helpers\bin\Debug\net5.0\ApplicazioniReali.Helpers.deps.json
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Helpers\bin\Debug\net5.0\ApplicazioniReali.Helpers.dll
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Helpers\bin\Debug\net5.0\ref\ApplicazioniReali.Helpers.dll
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Helpers\bin\Debug\net5.0\ApplicazioniReali.Helpers.pdb
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Helpers\obj\Debug\net5.0\ApplicazioniReali.Helpers.csproj.AssemblyReference.cache
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Helpers\obj\Debug\net5.0\ApplicazioniReali.Helpers.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Helpers\obj\Debug\net5.0\ApplicazioniReali.Helpers.AssemblyInfoInputs.cache
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Helpers\obj\Debug\net5.0\ApplicazioniReali.Helpers.AssemblyInfo.cs
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Helpers\obj\Debug\net5.0\ApplicazioniReali.Helpers.csproj.CoreCompileInputs.cache
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Helpers\obj\Debug\net5.0\ApplicazioniReali.Helpers.dll
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Helpers\obj\Debug\net5.0\ref\ApplicazioniReali.Helpers.dll
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Helpers\obj\Debug\net5.0\ApplicazioniReali.Helpers.pdb

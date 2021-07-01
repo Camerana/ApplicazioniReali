@@ -1,0 +1,129 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.API\\ApplicazioniReali.API.csproj": {}
+  },
+  "projects": {
+    "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.API\\ApplicazioniReali.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.API\\ApplicazioniReali.API.csproj",
+        "projectName": "ApplicazioniReali.API",
+        "projectPath": "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.API\\ApplicazioniReali.API.csproj",
+        "packagesPath": "C:\\Users\\Alex8\\.nuget\\packages\\",
+        "outputPath": "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alex8\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.Helpers\\ApplicazioniReali.Helpers.csproj": {
+                "projectPath": "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.Helpers\\ApplicazioniReali.Helpers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.Helpers\\ApplicazioniReali.Helpers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.Helpers\\ApplicazioniReali.Helpers.csproj",
+        "projectName": "ApplicazioniReali.Helpers",
+        "projectPath": "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.Helpers\\ApplicazioniReali.Helpers.csproj",
+        "packagesPath": "C:\\Users\\Alex8\\.nuget\\packages\\",
+        "outputPath": "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.Helpers\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alex8\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

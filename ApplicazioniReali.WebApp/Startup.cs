@@ -26,6 +26,8 @@ namespace ApplicazioniReali.WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            // RIMUOVERE COMMENTO PER DISABILITARE VALIDAZIONE LATO CLIENT
             //services.AddRazorPages()
             //        .AddViewOptions(options =>
             //        {
@@ -60,7 +62,7 @@ namespace ApplicazioniReali.WebApp
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{lang=it}/{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
