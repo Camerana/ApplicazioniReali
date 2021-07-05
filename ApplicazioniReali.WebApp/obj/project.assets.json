@@ -486,11 +486,11 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/5.0.6": {
+      "Microsoft.EntityFrameworkCore.SqlServer/5.0.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.Data.SqlClient": "2.0.1",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.6"
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.7"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
@@ -2052,6 +2052,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "ApplicazioniReali.Db/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7"
+        },
+        "compile": {
+          "bin/placeholder/ApplicazioniReali.Db.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApplicazioniReali.Db.dll": {}
+        }
       }
     }
   },
@@ -2697,17 +2710,17 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/5.0.6": {
-      "sha512": "OQFZB8hOaaU+VO62MHdkAVkPbfH+Yx8Kp+Bp+LKnmX7HxDGe/8DEOJSoHKAE8gFUTaSnJ5/OvBKNxXefeAyT0g==",
+    "Microsoft.EntityFrameworkCore.SqlServer/5.0.7": {
+      "sha512": "xfMz5GfjB/xwafBM27Qjrn9JtJE5EDJpz73caUlVJWfZtNL7fhULFsIiwfx+RpupWqtvFpp9q9OTouJ9UMtWOw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlserver/5.0.6",
+      "path": "microsoft.entityframeworkcore.sqlserver/5.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.xml",
-        "microsoft.entityframeworkcore.sqlserver.5.0.6.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlserver.5.0.7.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
@@ -7237,13 +7250,19 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ApplicazioniReali.Db/1.0.0": {
+      "type": "project",
+      "path": "../ApplicazioniReali.Db/ApplicazioniReali.Db.csproj",
+      "msbuildProject": "../ApplicazioniReali.Db/ApplicazioniReali.Db.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "ApplicazioniReali.Db >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 5.0.7",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.7",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.6",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.7",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.6",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2"
     ]
@@ -7274,7 +7293,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.Db\\ApplicazioniReali.Db.csproj": {
+              "projectPath": "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.Db\\ApplicazioniReali.Db.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -7299,7 +7322,7 @@
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
-            "version": "[5.0.6, )"
+            "version": "[5.0.7, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

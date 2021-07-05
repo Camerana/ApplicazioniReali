@@ -11,6 +11,8 @@ namespace ApplicazioniReali.API.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        private readonly Db.Data.ApplicazionirealiContext _applicazionirealiContext;
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -19,9 +21,10 @@ namespace ApplicazioniReali.API.Controllers
         private readonly ILogger<WeatherForecastController> _logger;
 
         //  https:localhost:4332/WeatherForecast
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, Db.Data.ApplicazionirealiContext applicazionirealiContext)
         {
             _logger = logger;
+            _applicazionirealiContext = applicazionirealiContext;
         }
 
         // GET =>  https:localhost:4332/WeatherForecast
@@ -40,16 +43,11 @@ namespace ApplicazioniReali.API.Controllers
 
         // GET =>  https:localhost:4332/WeatherForecast/get2
         [HttpGet("get2")]
-        public IEnumerable<WeatherForecast> Get2()
+        public IEnumerable<Db.Models.Movie> GetMovie()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            var movies = _applicazionirealiContext.Movies.ToList();
+
+            return movies;
         }
     }
 }

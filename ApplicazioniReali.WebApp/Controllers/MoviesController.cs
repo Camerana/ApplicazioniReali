@@ -1,6 +1,4 @@
-﻿using ApplicazioniReali.WebApp.Data;
-using ApplicazioniReali.WebApp.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,9 +7,9 @@ namespace ApplicazioniReali.WebApp.Controllers
 {
     public class MoviesController : Controller
     {
-        private readonly ApplicazioniRealiWebAppContext _context;
+        private readonly Db.Data.ApplicazionirealiContext _context;
 
-        public MoviesController(ApplicazioniRealiWebAppContext context)
+        public MoviesController(Db.Data.ApplicazionirealiContext context)
         {
             _context = context;
         }
@@ -19,7 +17,7 @@ namespace ApplicazioniReali.WebApp.Controllers
         // GET: Movies
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Movie.ToListAsync());
+            return View(await _context.Movies.ToListAsync());
         }
 
         // GET: Movies/Details/5
@@ -30,8 +28,8 @@ namespace ApplicazioniReali.WebApp.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var movie = await _context.Movies.FirstOrDefaultAsync(m => m.Id == id);
+
             if (movie == null)
             {
                 return NotFound();
@@ -51,7 +49,7 @@ namespace ApplicazioniReali.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Db.Models.Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -70,7 +68,7 @@ namespace ApplicazioniReali.WebApp.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie.FindAsync(id);
+            var movie = await _context.Movies.FindAsync(id);
             if (movie == null)
             {
                 return NotFound();
@@ -83,7 +81,7 @@ namespace ApplicazioniReali.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Db.Models.Movie movie)
         {
             if (id != movie.Id)
             {
@@ -122,8 +120,7 @@ namespace ApplicazioniReali.WebApp.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var movie = await _context.Movies.FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
             {
                 return NotFound();
@@ -137,15 +134,15 @@ namespace ApplicazioniReali.WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var movie = await _context.Movie.FindAsync(id);
-            _context.Movie.Remove(movie);
+            var movie = await _context.Movies.FindAsync(id);
+            _context.Movies.Remove(movie);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool MovieExists(int id)
         {
-            return _context.Movie.Any(e => e.Id == id);
+            return _context.Movies.Any(e => e.Id == id);
         }
     }
 }

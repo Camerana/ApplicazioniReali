@@ -33,9 +33,10 @@
     ".NETCoreApp,Version=v5.0": {
       "ApplicazioniReali.WebApp/1.0.0": {
         "dependencies": {
+          "ApplicazioniReali.Db": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.7",
           "Microsoft.EntityFrameworkCore.Design": "5.0.7",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -795,15 +796,15 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/5.0.6": {
+      "Microsoft.EntityFrameworkCore.SqlServer/5.0.7": {
         "dependencies": {
           "Microsoft.Data.SqlClient": "2.0.1",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.7"
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {
-            "assemblyVersion": "5.0.6.0",
-            "fileVersion": "5.0.621.21307"
+            "assemblyVersion": "5.0.7.0",
+            "fileVersion": "5.0.721.26102"
           }
         },
         "compile": {
@@ -1854,6 +1855,17 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "ApplicazioniReali.Db/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7"
+        },
+        "runtime": {
+          "ApplicazioniReali.Db.dll": {}
+        },
+        "compile": {
+          "ApplicazioniReali.Db.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -3704,12 +3716,12 @@
       "path": "microsoft.entityframeworkcore.relational/5.0.7",
       "hashPath": "microsoft.entityframeworkcore.relational.5.0.7.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/5.0.6": {
+    "Microsoft.EntityFrameworkCore.SqlServer/5.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OQFZB8hOaaU+VO62MHdkAVkPbfH+Yx8Kp+Bp+LKnmX7HxDGe/8DEOJSoHKAE8gFUTaSnJ5/OvBKNxXefeAyT0g==",
-      "path": "microsoft.entityframeworkcore.sqlserver/5.0.6",
-      "hashPath": "microsoft.entityframeworkcore.sqlserver.5.0.6.nupkg.sha512"
+      "sha512": "sha512-xfMz5GfjB/xwafBM27Qjrn9JtJE5EDJpz73caUlVJWfZtNL7fhULFsIiwfx+RpupWqtvFpp9q9OTouJ9UMtWOw==",
+      "path": "microsoft.entityframeworkcore.sqlserver/5.0.7",
+      "hashPath": "microsoft.entityframeworkcore.sqlserver.5.0.7.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Tools/5.0.6": {
       "type": "package",
@@ -4438,6 +4450,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "ApplicazioniReali.Db/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

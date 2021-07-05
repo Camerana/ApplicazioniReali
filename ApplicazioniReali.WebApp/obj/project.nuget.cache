@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mqG3HUA0CXiqKyZjypm8hl+hZoX3ZtFedjYsW+5oPt4afe1hQbqYbrcwdLgI6IJVTzTNhTrBkcQzu3AB0Rugpw==",
+  "dgSpecHash": "ZdxydNdFCAMej7m5N7BIoBGukIKz4f5BpOHGxW+xjQxsJS2KPaLybhGmf9HDG549QKrtbMV6bq8aCdTfBHYoKw==",
   "success": true,
   "projectFilePath": "D:\\PROGETTI\\Camerana\\TDPC12\\PROGETTI\\MVC\\ApplicazioniReali\\ApplicazioniReali.WebApp\\ApplicazioniReali.WebApp.csproj",
   "expectedPackageFiles": [
@@ -26,7 +26,7 @@
     "C:\\Users\\Alex8\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.7\\microsoft.entityframeworkcore.analyzers.5.0.7.nupkg.sha512",
     "C:\\Users\\Alex8\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.7\\microsoft.entityframeworkcore.design.5.0.7.nupkg.sha512",
     "C:\\Users\\Alex8\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.7\\microsoft.entityframeworkcore.relational.5.0.7.nupkg.sha512",
-    "C:\\Users\\Alex8\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.6\\microsoft.entityframeworkcore.sqlserver.5.0.6.nupkg.sha512",
+    "C:\\Users\\Alex8\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.7\\microsoft.entityframeworkcore.sqlserver.5.0.7.nupkg.sha512",
     "C:\\Users\\Alex8\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.6\\microsoft.entityframeworkcore.tools.5.0.6.nupkg.sha512",
     "C:\\Users\\Alex8\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Alex8\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",

@@ -41,7 +41,7 @@ namespace ApplicazioniReali.Db.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movie");
+                    b.ToTable("Movies");
                 });
 
             modelBuilder.Entity("ApplicazioniReali.Db.Models.User", b =>

@@ -26,8 +26,15 @@ using ApplicazioniReali.WebApp.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.WebApp\Views\_ViewImports.cshtml"
+using ApplicazioniReali.Db.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c64c4ba3b0d8a90fc7f0ceaa5f7f9e9c3c660c47", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d9c7526b4f26b84433dbfa20c3063ed7b2df721f", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
