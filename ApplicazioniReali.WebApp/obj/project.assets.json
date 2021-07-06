@@ -499,10 +499,10 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/5.0.6": {
+      "Microsoft.EntityFrameworkCore.Tools/5.0.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "5.0.6"
+          "Microsoft.EntityFrameworkCore.Design": "5.0.7"
         },
         "compile": {
           "lib/netstandard2.1/_._": {}
@@ -2057,7 +2057,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2"
         },
         "compile": {
           "bin/placeholder/ApplicazioniReali.Db.dll": {}
@@ -2724,17 +2725,17 @@
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Tools/5.0.6": {
-      "sha512": "eh3jspEKaDu/q3+YqdZ6V1Htwjn/eMp5rT9KGHFw4GEKUIg7CVNzGtZ57ZV5HwBus4A/6OcGUGa6/J72UU8ZUg==",
+    "Microsoft.EntityFrameworkCore.Tools/5.0.7": {
+      "sha512": "qVv3yDHMBbRRGlUG4/vJ0N7gmm8XoiovJ9fdiZBYRn1/lpmufwSr7uHOQ/f3T2pvX/wNSDjvJNoKncOTHEs9tw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/5.0.6",
+      "path": "microsoft.entityframeworkcore.tools/5.0.7",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/_._",
-        "microsoft.entityframeworkcore.tools.5.0.6.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.5.0.7.nupkg.sha512",
         "microsoft.entityframeworkcore.tools.nuspec",
         "tools/EntityFrameworkCore.PS2.psd1",
         "tools/EntityFrameworkCore.PS2.psm1",
@@ -7263,7 +7264,7 @@
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 5.0.7",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.7",
-      "Microsoft.EntityFrameworkCore.Tools >= 5.0.6",
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.7",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2"
     ]
   },
@@ -7328,7 +7329,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[5.0.6, )"
+            "version": "[5.0.7, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
