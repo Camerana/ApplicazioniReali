@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ApplicazioniReali.API.Extensions;
 using ApplicazioniReali.Db.Data;
 using ApplicazioniReali.Db.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace ApplicazioniReali.API.Controllers
 {
@@ -32,6 +34,32 @@ namespace ApplicazioniReali.API.Controllers
             var item = _applicazionirealiContext.Users.Find(id);
             return item;
         }
+        
+        [HttpPost]
+        public IActionResult Test(UserExt user)
+        {
+            if (ModelState.IsValid)
+            {
+                user.Property1 = "";
+                user.Method1();
+
+                return Ok(user);
+            }
+
+            var errors = ModelState.Select(x => x.Value.Errors)
+                                   .Where(y => y.Count > 0)
+                                   .ToList();
+
+            return BadRequest(errors);
+        }
+
+        //PUT       =>      MODIFICA MODEL
+
+        //POST      =>      CREAZIONE MODEL
+
+        //DELETE    =>      CANCELLAZIONE MODEL
+
+
 
     }
 }

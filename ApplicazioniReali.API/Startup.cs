@@ -32,7 +32,12 @@ namespace ApplicazioniReali.API
                 options.UseSqlServer(Configuration.GetConnectionString("connString"));
             });
 
-            services.AddControllers();
+            services.AddControllers()
+                    .ConfigureApiBehaviorOptions(options =>
+                    {
+                        options.SuppressModelStateInvalidFilter = true;
+                    });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApplicazioniReali.API", Version = "v1" });
