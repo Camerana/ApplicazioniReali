@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicazioniReali.API", "Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicazioniReali.Helpers", "ApplicazioniReali.Helpers\ApplicazioniReali.Helpers.csproj", "{73554F21-7EA9-4537-BD67-887440A3383D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicazioniReali.Db", "ApplicazioniReali.Db\ApplicazioniReali.Db.csproj", "{E79CCE3C-E890-45AD-81E3-EC021552893D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicazioniReali.Db", "ApplicazioniReali.Db\ApplicazioniReali.Db.csproj", "{E79CCE3C-E890-45AD-81E3-EC021552893D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

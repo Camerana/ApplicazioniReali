@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApplicazioniReali.API.Extensions
 {
+    // ESTENSIONE DEL MODELLO BASE PER UTILIZZARE DATA ANNOTATIONS, CUSTOM PROPERTIES, CUSTOM METHODS, NON SERIALIZZARE CERTE PROPERTIES, ECC...
     public class UserExt : User
     {
         public string Property1 { get; set; }

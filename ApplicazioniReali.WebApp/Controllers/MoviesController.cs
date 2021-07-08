@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,7 +22,7 @@ namespace ApplicazioniReali.WebApp.Controllers
         }
 
         // GET: Movies/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
             {
@@ -61,7 +62,7 @@ namespace ApplicazioniReali.WebApp.Controllers
         }
 
         // GET: Movies/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
             {
@@ -81,7 +82,7 @@ namespace ApplicazioniReali.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Db.Models.Movie movie)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Db.Models.Movie movie)
         {
             if (id != movie.Id)
             {
@@ -113,7 +114,7 @@ namespace ApplicazioniReali.WebApp.Controllers
         }
 
         // GET: Movies/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
             {
@@ -140,7 +141,7 @@ namespace ApplicazioniReali.WebApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool MovieExists(int id)
+        private bool MovieExists(Guid id)
         {
             return _context.Movies.Any(e => e.Id == id);
         }
