@@ -26,12 +26,12 @@ namespace ApplicazioniReali.Db.Seeds
             {
                 AppUser appUser = new AppUser()
                 {
-                    Email = "test@gmail.com",
-                    UserName = "test",
+                    Email = "alessio.filippucci@camerana.it",
+                    UserName = "alessio.filippucci",
                     SecurityStamp = Guid.NewGuid().ToString()
                 };
 
-                var result = _userManager.CreateAsync(appUser, "Test@123").Result;
+                var result = _userManager.CreateAsync(appUser, "Passw0rd!").Result;
 
                 if (result.Succeeded)
                 {
