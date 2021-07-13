@@ -1,5 +1,6 @@
 ﻿using ApplicazioniReali.Db.Data;
 using ApplicazioniReali.Db.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,6 +9,7 @@ using System.Linq;
 
 namespace ApplicazioniReali.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class MoviesController : ControllerBase

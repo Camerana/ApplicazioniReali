@@ -46,6 +46,37 @@ namespace ApplicazioniReali.Db.Seeds
                     _context.SaveChanges();
                 }
             }
+            
+            if (!_context.Movies.Any())
+            {
+                var movies = new List<Movie>()
+                {
+                    new Movie()
+                    {
+                        Title = "Pulp Fiction",
+                        ReleaseDate = new DateTime(1994, 01, 01),
+                        Genre = "Giallo/Commedia",
+                        Price = 10.99m
+                    },
+                    new Movie()
+                    {
+                        Title = "Taxi Driver",
+                        ReleaseDate = new DateTime(1976, 01, 01),
+                        Genre = "Giallo/Drammatico",
+                        Price = 6.99m
+                    },
+                    new Movie()
+                    {
+                        Title = "Bastardi senza gloria",
+                        ReleaseDate = new DateTime(2009, 01, 01),
+                        Genre = "Guerra/Azione",
+                        Price = 15.99m
+                    }
+                };
+
+                _context.AddRange(movies);
+                _context.SaveChanges();
+            }
         }
     }
 }
