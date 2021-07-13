@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ApplicazioniReali.API.Extensions;
-using ApplicazioniReali.Db.Data;
+﻿using ApplicazioniReali.Db.Data;
 using ApplicazioniReali.Db.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ApplicazioniReali.API.Controllers
 {
@@ -14,32 +12,32 @@ namespace ApplicazioniReali.API.Controllers
     [Route("api/[controller]")]
     public class MoviesController : ControllerBase
     {
-        private readonly ApplicazionirealiContext _applicazionirealiContext;
+        private readonly ApplicazionirealiContext _context;
 
-        public MoviesController(ApplicazionirealiContext applicazionirealiContext)
+        public MoviesController(ApplicazionirealiContext context)
         {
-            _applicazionirealiContext = applicazionirealiContext;
+            _context = context;
         }
 
         [HttpGet]
         public IEnumerable<Movie> Get()
         {
-            var items = _applicazionirealiContext.Movies.ToList();
+            var items = _context.Movies.ToList();
             return items;
         }
 
         [HttpGet("{id}")]
         public Movie Get(Guid id)
         {
-            var item = _applicazionirealiContext.Movies.Find(id);
+            var item = _context.Movies.Find(id);
             return item;
         }
 
         [HttpPost]
         public IActionResult Post(Movie user)
         {
-            _applicazionirealiContext.Add(user);
-            _applicazionirealiContext.SaveChanges();
+            _context.Add(user);
+            _context.SaveChanges();
             return Ok("film_creato");
         }
 
@@ -54,8 +52,8 @@ namespace ApplicazioniReali.API.Controllers
 
             try
             {
-                _applicazionirealiContext.Update(user);
-                _applicazionirealiContext.SaveChanges();
+                _context.Update(user);
+                _context.SaveChanges();
                 return Ok("film_aggiornato");
             }
             catch (DbUpdateConcurrencyException)
@@ -70,19 +68,19 @@ namespace ApplicazioniReali.API.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
-            var user = _applicazionirealiContext.Movies.Find(id);
+            var user = _context.Movies.Find(id);
 
             if (user == null)
                 return NotFound();
 
-            _applicazionirealiContext.Remove(user);
-            _applicazionirealiContext.SaveChanges();
+            _context.Remove(user);
+            _context.SaveChanges();
             return Ok("film_rimosso");
         }
 
         private bool UserExist(Guid id)
         {
-            return _applicazionirealiContext.Movies.Any(x => x.Id == id);
+            return _context.Movies.Any(x => x.Id == id);
         }
     }
 }

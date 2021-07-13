@@ -28,7 +28,7 @@ namespace ApplicazioniReali.WebApp
             //            options.HtmlHelperOptions.ClientValidationEnabled = false;
             //        });
 
-            services.AddDbContext<Db.Data.ApplicazionirealiContext>(options =>
+            services.AddDbContext<Db.Data.IdentityContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ApplicazioniRealiWebAppContext")));
         }
 

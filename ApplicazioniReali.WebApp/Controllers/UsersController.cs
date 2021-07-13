@@ -10,9 +10,9 @@ namespace ApplicazioniReali.WebApp.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly ApplicazionirealiContext _context;
+        private readonly IdentityContext _context;
 
-        public UsersController(ApplicazionirealiContext context)
+        public UsersController(IdentityContext context)
         {
             _context = context;
         }

@@ -1,6 +1,10 @@
-﻿using ApplicazioniReali.Db.Data;
+﻿using ApplicazioniReali.API.Models.Request;
+using ApplicazioniReali.API.ModelsIdentity;
+using ApplicazioniReali.Db.Data;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,31 +16,32 @@ namespace ApplicazioniReali.API.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly ApplicazionirealiContext _applicazionirealiContext;
+        private readonly ApplicazionirealiContext _context;
+        private UserManager<AppUser> _userManager;
 
-        public AuthController(ApplicazionirealiContext applicazionirealiContext)
+        public AuthController(ApplicazionirealiContext context, UserManager<AppUser> userManager)
         {
-            _applicazionirealiContext = applicazionirealiContext;
-        }
-
-        public class LoginForm
-        {
-            public string username { get; set; }
-            public string password { get; set; }
+            _context = context;
+            _userManager = userManager;
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] LoginForm loginForm)
+        public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
-            if(string.IsNullOrEmpty(loginForm.username) || string.IsNullOrEmpty(loginForm.password))
+            if(string.IsNullOrEmpty(loginModel.Username) || string.IsNullOrEmpty(loginModel.Password))
                 return BadRequest("Username e/o Password mancanti");
 
-            var user = _applicazionirealiContext.Users.Where(x => x.Username == loginForm.username && x.Password == loginForm.password).FirstOrDefault();
+            var appUser = await _userManager.FindByNameAsync(loginModel.Username);
 
-            if (user == null)
+            if (appUser == null || !await _userManager.CheckPasswordAsync(appUser, loginModel.Password))
                 return BadRequest("Username e/o Password errati");
 
-            return Ok(new { Id = user.Id, Username = user.Username });
+            var user = await _context.Users.Where(x => x.AspNetUsersId == appUser.Id).FirstOrDefaultAsync();
+
+            if(user == null)
+                return NotFound("User not found or deleted");
+
+            return Ok(new { user.Id, IdentityId = appUser.Id, appUser.Email, user.FirstName, user.LastName });
         }
     }
 }

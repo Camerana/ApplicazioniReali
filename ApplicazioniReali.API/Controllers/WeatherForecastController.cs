@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ApplicazioniReali.Db.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace ApplicazioniReali.API.Controllers
 {
@@ -11,7 +11,7 @@ namespace ApplicazioniReali.API.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private readonly Db.Data.ApplicazionirealiContext _applicazionirealiContext;
+        private readonly ApplicazionirealiContext _context;
 
         private static readonly string[] Summaries = new[]
         {
@@ -21,10 +21,10 @@ namespace ApplicazioniReali.API.Controllers
         private readonly ILogger<WeatherForecastController> _logger;
 
         //  https:localhost:4332/WeatherForecast
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, Db.Data.ApplicazionirealiContext applicazionirealiContext)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, ApplicazionirealiContext context)
         {
             _logger = logger;
-            _applicazionirealiContext = applicazionirealiContext;
+            _context = context;
         }
 
         // GET =>  https:localhost:4332/WeatherForecast
@@ -45,7 +45,7 @@ namespace ApplicazioniReali.API.Controllers
         [HttpGet("get2")]
         public IEnumerable<Db.Models.Movie> GetMovie()
         {
-            var movies = _applicazionirealiContext.Movies.ToList();
+            var movies = _context.Movies.ToList();
 
             return movies;
         }

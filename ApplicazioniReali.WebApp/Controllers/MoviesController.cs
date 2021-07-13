@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ApplicazioniReali.Db.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
@@ -8,9 +9,9 @@ namespace ApplicazioniReali.WebApp.Controllers
 {
     public class MoviesController : Controller
     {
-        private readonly Db.Data.ApplicazionirealiContext _context;
+        private readonly ApplicazionirealiContext _context;
 
-        public MoviesController(Db.Data.ApplicazionirealiContext context)
+        public MoviesController(ApplicazionirealiContext context)
         {
             _context = context;
         }

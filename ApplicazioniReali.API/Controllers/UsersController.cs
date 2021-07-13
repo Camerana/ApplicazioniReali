@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ApplicazioniReali.API.Extensions;
-using ApplicazioniReali.Db.Data;
+﻿using ApplicazioniReali.Db.Data;
 using ApplicazioniReali.Db.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ApplicazioniReali.API.Controllers
 {
@@ -14,32 +12,32 @@ namespace ApplicazioniReali.API.Controllers
     [Route("api/[controller]")]
     public class UsersController: ControllerBase
     {
-        private readonly ApplicazionirealiContext _applicazionirealiContext;
+        private readonly ApplicazionirealiContext _context;
 
-        public UsersController(ApplicazionirealiContext applicazionirealiContext)
+        public UsersController(ApplicazionirealiContext context)
         {
-            _applicazionirealiContext = applicazionirealiContext;
+            _context = context;
         }
 
         [HttpGet]
         public IEnumerable<User> Get()
         {
-            var items = _applicazionirealiContext.Users.ToList();
+            var items = _context.Users.ToList();
             return items;
         }
 
         [HttpGet("{id}")]
         public User Get(Guid id)
         {
-            var item = _applicazionirealiContext.Users.Find(id);
+            var item = _context.Users.Find(id);
             return item;
         }
 
         [HttpPost]
         public IActionResult Post(User user)
         {
-            _applicazionirealiContext.Add(user);
-            _applicazionirealiContext.SaveChanges();
+            _context.Add(user);
+            _context.SaveChanges();
             return Ok("utente_creato");
         }
 
@@ -54,8 +52,8 @@ namespace ApplicazioniReali.API.Controllers
 
             try
             {
-                _applicazionirealiContext.Update(user);
-                _applicazionirealiContext.SaveChanges();
+                _context.Update(user);
+                _context.SaveChanges();
                 return Ok("utente_aggiornato");
             }
             catch (DbUpdateConcurrencyException)
@@ -70,19 +68,19 @@ namespace ApplicazioniReali.API.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
-            var user = _applicazionirealiContext.Users.Find(id);
+            var user = _context.Users.Find(id);
 
             if (user == null)
                 return NotFound();
 
-            _applicazionirealiContext.Remove(user);
-            _applicazionirealiContext.SaveChanges();
+            _context.Remove(user);
+            _context.SaveChanges();
             return Ok("utente_rimosso");
         }
 
         private bool UserExist(Guid id)
         {
-            return _applicazionirealiContext.Users.Any(x => x.Id == id);
+            return _context.Users.Any(x => x.Id == id);
         }
 
 
