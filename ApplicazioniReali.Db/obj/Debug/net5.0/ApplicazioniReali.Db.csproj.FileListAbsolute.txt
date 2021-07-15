@@ -1,4 +1,6 @@
 D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\bin\Debug\net5.0\ApplicazioniReali.Db.deps.json
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\bin\Debug\net5.0\ApplicazioniReali.Db.runtimeconfig.json
+D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\bin\Debug\net5.0\ApplicazioniReali.Db.runtimeconfig.dev.json
 D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\bin\Debug\net5.0\ApplicazioniReali.Db.dll
 D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\bin\Debug\net5.0\ref\ApplicazioniReali.Db.dll
 D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\bin\Debug\net5.0\ApplicazioniReali.Db.pdb
@@ -9,7 +11,4 @@ D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\
 D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\obj\Debug\net5.0\ApplicazioniReali.Db.dll
 D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\obj\Debug\net5.0\ref\ApplicazioniReali.Db.dll
 D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\obj\Debug\net5.0\ApplicazioniReali.Db.pdb
-D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\bin\Debug\net5.0\ApplicazioniReali.Db.runtimeconfig.json
-D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\bin\Debug\net5.0\ApplicazioniReali.Db.runtimeconfig.dev.json
 D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\obj\Debug\net5.0\ApplicazioniReali.Db.genruntimeconfig.cache
-D:\PROGETTI\Camerana\TDPC12\PROGETTI\MVC\ApplicazioniReali\ApplicazioniReali.Db\obj\Debug\net5.0\ApplicazioniReali.Db.csproj.AssemblyReference.cache
